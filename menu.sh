@@ -1,0 +1,126 @@
+#!/bin/bash
+Cyan='\033[0;36m'
+Red='\033[0;31m'
+Yellow='\033[0;33m'
+Blue='\033[0;34m'
+Purple='\033[0;35m'
+Cyan='\033[0;36m'
+Green='\033[0;32m'
+UGreen='\033[4;32m'
+URed='\033[4;31m'
+On_Green='\033[42m'
+BGreen='\033[1;32m'
+BYellow='\033[1;33m'
+UBlue='\033[4;34m'
+UPurple='\033[4;35m'
+UYellow='\033[4;33m'
+UCyan='\033[4;36m'
+On_Blue='\033[44m'
+On_Purple='\033[45m'
+On_Yellow='\033[43m'
+On_Cyan='\033[46m'
+On_Red='\033[41m'
+NC='\e[0m'
+clear
+echo -e ""
+echo -e "${BGreen}=============================${On_Purple}-Menu-${NC}${BGreen}=============================${NC}"
+echo -e ""
+echo -e "* ${Purple}menu${NC}         : ${UPurple}List of Main Commands${NC}"
+echo -e ""
+echo -e "${BGreen}=========================${On_Yellow}-SSH & OpenVPN-${NC}${BGreen}========================${NC}"
+echo -e ""
+echo -e "* ${Yellow}usernew${NC}      : ${UYellow}Create SSH & OpenVPN Account${NC}"
+echo -e "* ${Yellow}trial${NC}        : ${UYellow}Generate SSH & OpenVPN Trial Account${NC}"
+echo -e "* ${Yellow}renew${NC}        : ${UYellow}Extending SSH & OpenVPN Account Active Life${NC}"
+echo -e "* ${Yellow}deluser${NC}      : ${UYellow}Delete SSH & OpenVPN Account${NC}"
+echo -e "* ${Yellow}cek${NC}          : ${UYellow}Check User Login SSH & OpenVPN${NC}"
+echo -e "* ${Yellow}member${NC}       : ${UYellow}Daftar Member SSH & OpenVPN${NC}"
+echo -e "* ${Yellow}delete${NC}       : ${UYellow}Delete User Expired SSH & OpenVPN${NC}"
+echo -e "* ${Yellow}autokill${NC}     : ${UYellow}Set up Autokill SSH${NC}"
+echo -e "* ${Yellow}ceklim${NC}       : ${UYellow}Displays Users Who Do Multi Login SSH${NC}"
+echo -e "* ${Yellow}restart${NC}      : ${UYellow}Restart Service Dropbear, Squid3, OpenVPN dan SSH${NC}"
+echo -e ""
+echo -e "${BGreen}===========================${On_Blue}-Wireguard-${NC}${BGreen}=========================${NC}"
+echo -e ""
+echo -e "* ${Blue}add-wg${NC}       : ${UBlue}Create Wireguard Account${NC}"
+echo -e "* ${Blue}del-wg${NC}       : ${UBlue}Delete Wireguard Account${NC}"
+echo -e "* ${Blue}cek-wg${NC}       : ${UBlue}Check User Login Wireguard${NC}"
+echo -e "* ${Blue}renew-wg${NC}     : ${UBlue}Extending Wireguard Account Active Life${NC}"
+echo -e "* ${Blue}wg show${NC}      : ${UBlue}Check Wireguard User Interface${NC}"
+echo -e ""
+echo -e "${BGreen}=============================${On_Cyan}-L2TP-${NC}${BGreen}============================${NC}"
+echo -e ""
+echo -e "* ${Cyan}add-l2tp${NC}     : ${UCyan}Creating L2TP Account${NC}"
+echo -e "* ${Cyan}del-l2tp${NC}     : ${UCyan}Deleting L2TP Account${NC}"
+echo -e "* ${Cyan}renew-l2tp${NC}   : ${UCyan}Extending L2TP Account Active Life${NC}"
+echo -e ""
+echo -e "${BGreen}=============================${NC}${On_Green}-PPTP-${NC}${BGreen}============================${NC}"
+echo -e ""
+echo -e "* ${Green}add-pptp${NC}     : ${UGreen}Create Account PPTP${NC}"
+echo -e "* ${Green}del-pptp${NC}     : ${UGreen}Delete PPTP Account${NC}"
+echo -e "* ${Green}renew-pptp${NC}   : ${UGreen}Extending PPTP Account Active Life${NC}"
+echo -e "* ${Green}cek-pptp${NC}     : ${UGreen}Check User Login PPTP${NC}"
+echo -e ""
+echo -e "${BGreen}=============================${NC}${On_Red}-SSTP-${NC}${BGreen}============================${NC}"
+echo -e ""
+echo -e "* ${Red}add-sstp${NC}     : ${URed}Create Account SSTP${NC}"
+echo -e "* ${Red}del-sstp${NC}     : ${URed}Delete SSTP Account${NC}"
+echo -e "* ${Red}renew-sstp${NC}   : ${URed}Extending SSTP Account Active Life${NC}"
+echo -e "* ${Red}cek-sstp${NC}     : ${URed}Check User Login SSTP${NC}"
+echo -e ""
+echo -e "${BGreen}=============================${NC}${On_Purple}-SSR-${NC}${BGreen}=============================${NC}"
+echo -e ""
+echo -e "* ${Purple}add-ssr${NC}      : ${UPurple}Create SSR Account${NC}"
+echo -e "* ${Purple}del-ssr${NC}      : ${UPurple}Deleting SSR Account${NC}"
+echo -e "* ${Purple}renew-ssr${NC}    : ${UPurple}Extending SSR Account Active Life${NC}"
+echo -e "* ${Purple}ssr${NC}          : ${UPurple}Show Other SSR Menu${NC}"
+echo -e ""
+echo -e "${BGreen}========================${NC}${On_Yellow}-Shadowsocks OBFS-${NC}${BGreen}=====================${NC}"
+echo -e ""
+echo -e "* ${Yellow}add-ss${NC}       : ${UYellow}Creating Shadowsocks Account${NC}"
+echo -e "* ${Yellow}del-ss${NC}       : ${UYellow}Delete Shadowsocks Account${NC}"
+echo -e "* ${Yellow}renew-ss${NC}     : ${UYellow}Extending Shadowsocks Account Active Life${NC}"
+echo -e "* ${Yellow}cek-ss${NC}       : ${UYellow}Check User Login Shadowsocks${NC}"
+echo -e ""
+echo -e "${BGreen}=============================${NC}${Red}${On_Blue}-VMESS-${NC}${BGreen}===========================${NC}"
+echo -e ""
+echo -e "* ${Blue}add-ws${NC}       : ${UBlue}Create V2RAY Vmess Websocket Account${NC} "
+echo -e "* ${Blue}del-ws${NC}       : ${UBlue}Deleting V2RAY Vmess Websocket Account${NC} "
+echo -e "* ${Blue}renew-ws${NC}     : ${UBlue}Extending Vmess Account Active Life${NC} "
+echo -e "* ${Blue}cek-ws${NC}       : ${UBlue}Check User Login V2RAY${NC} "
+echo -e "* ${Blue}cert2vray${NC}    : ${UBlue}Renew Certificate V2RAY Account${NC} "
+echo -e ""
+echo -e "${BGreen}=============================${On_Cyan}-VLESS-${NC}${BGreen}===========================${NC}"
+echo -e ""
+echo -e "* ${Cyan}add-vless${NC}    : ${UCyan}Create V2RAY Vless Websocket Account${NC}"
+echo -e "* ${Cyan}del-vless${NC}    : ${UCyan}Deleting V2RAY Vless Websocket Account${NC}"
+echo -e "* ${Cyan}renew-vless${NC}  : ${UCyan}Extending Vless Account Active Life${NC}"
+echo -e "* ${Cyan}cek-ws${NC}       : ${UCyan}Check User Login V2RAY${NC}"
+echo -e ""
+echo -e "${BGreen}=============================${NC}${On_Green}-Trojan-${NC}${BGreen}==========================${NC}"
+echo -e ""
+echo -e "* ${Green}add-tr${NC}       : ${UGreen}Create Trojan Account${NC}"
+echo -e "* ${Green}del-tr${NC}       : ${UGreen}Deleting Trojan Account${NC}"
+echo -e "* ${Green}renew-tr${NC}     : ${UGreen}Extending Trojan Account Active Life${NC}"
+echo -e "* ${Green}cek-tr${NC}       : ${UGreen}Check User Login Trojan${NC}"
+echo -e ""
+echo -e "${BGreen}=============================${NC}${On_Red}-SYSTEM--${NC}${BGreen}==========================${NC}"
+echo -e ""
+echo -e "* ${Red}add-host${NC}     : ${URed}Add Or Change Subdomain Host For VPS${NC}"
+echo -e "* ${Red}change-port${NC}  : ${URed}Change Port Of Some Service${NC}"
+echo -e "* ${Red}autobackup${NC}   : ${URed}Autobackup Data VPS${NC}"
+echo -e "* ${Red}backup${NC}       : ${URed}Backup Data VPS${NC}"
+echo -e "* ${Red}restore${NC}      : ${URed}Restore Data VPS${NC}"
+echo -e "* ${Red}wbmn${NC}         : ${URed}Webmin Menu${NC}"
+echo -e "* ${Red}kernel-updt${NC}  : ${URed}Update To Latest Kernel${NC}"
+echo -e "* ${Red}limit-speed${NC}  : ${URed}Limit Bandwith Speed Server${NC}"
+echo -e "* ${Red}ram${NC}          : ${URed}Check Usage of VPS Ram${NC}"
+echo -e "* ${Red}reboot${NC}       : ${URed}Reboot VPS${NC}"
+echo -e "* ${Red}speedtest${NC}    : ${URed}Speedtest VPS${NC}"
+echo -e "* ${Red}update${NC}       : ${URed}Update To Latest Script Version${NC}"
+echo -e "* ${Red}info${NC}         : ${URed}Displaying System Information${NC}"
+echo -e "* ${Red}about${NC}        : ${URed}Info Script Auto Install${NC}"
+echo -e "* ${Red}exit${NC}         : ${URed}Exit From VPS${NC}"
+echo -e ""
+echo -e "${BGreen}===============================================================${NC}"
+echo -e ""
