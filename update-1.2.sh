@@ -11,14 +11,14 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.co);
-IZIN=$( curl http://54.179.120.207/djtv/ipbaikbanget | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/jhall031/TESTd/main/ipk | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
 echo -e "${red}Permission Denied!${NC}";
 echo "Please Contact Admin"
-echo "Telegram t.me/djas08"
-echo "WhatsApp wa.me/6282220428038"
+echo "Telegram t.me/neko_poii"
+echo "WhatsApp wa.me/62822355501512"
 rm -f setup.sh
 exit 0
 fi
@@ -29,25 +29,25 @@ exit 0
 fi
 echo "Start Update"
 cd /usr/bin
-wget -O menu "http://54.179.120.207/djtv/menu.sh"
-wget -O usernew "http://54.179.120.207/djtv/usernew.sh"
-wget -O trial "http://54.179.120.207/djtv/trial.sh"
-wget -O change-port "http://54.179.120.207/djtv/change.sh"
-wget -O port-ovpn "http://54.179.120.207/djtv/port-ovpn.sh"
-wget -O port-ssl "http://54.179.120.207/djtv/port-ssl.sh"
-wget -O port-wg "http://54.179.120.207/djtv/port-wg.sh"
-wget -O port-tr "http://54.179.120.207/djtv/port-tr.sh"
-wget -O port-sstp "http://54.179.120.207/djtv/port-sstp.sh"
-wget -O port-squid "http://54.179.120.207/djtv/port-squid.sh"
-wget -O port-ws "http://54.179.120.207/djtv/port-ws.sh"
-wget -O port-vless "http://54.179.120.207/djtv/port-vless.sh"
-wget -O wbmn "http://54.179.120.207/djtv/webmin.sh"
-wget -O xp "http://54.179.120.207/djtv/xp.sh"
-wget -O limit-speed "http://54.179.120.207/djtv/limit-speed.sh"
-wget -O add-sstp "http://54.179.120.207/djtv/add-sstp.sh"
-wget -O add-ws "http://54.179.120.207/djtv/add-ws.sh"
-wget -O add-vless "http://54.179.120.207/djtv/add-vless.sh"
-wget -O add-tr "http://54.179.120.207/djtv/add-tr.sh"
+wget -O menu "https://raw.githubusercontent.com/jhall031/TESTd/main/menu.sh"
+wget -O usernew "https://raw.githubusercontent.com/jhall031/TESTd/main/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/jhall031/TESTd/main/trial.sh"
+wget -O change-port "https://raw.githubusercontent.com/jhall031/TESTd/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/jhall031/TESTd/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/jhall031/TESTd/main/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/jhall031/TESTd/main/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/jhall031/TESTd/main/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/jhall031/TESTd/main/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/jhall031/TESTd/main/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/jhall031/TESTd/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/jhall031/TESTd/main/port-vless.sh"
+wget -O wbmn "https://raw.githubusercontent.com/jhall031/TESTd/main/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/jhall031/TESTd/main/xp.sh"
+wget -O limit-speed "https://raw.githubusercontent.com/jhall031/TESTd/main/limit-speed.sh"
+wget -O add-sstp "https://raw.githubusercontent.com/jhall031/TESTd/main/add-sstp.sh"
+wget -O add-ws "https://raw.githubusercontent.com/jhall031/TESTd/main/add-ws.sh"
+wget -O add-vless "https://raw.githubusercontent.com/jhall031/TESTd/main/add-vless.sh"
+wget -O add-tr "https://raw.githubusercontent.com/jhall031/TESTd/main/add-tr.sh"
 chmod +x change-port
 chmod +x port-ovpn
 chmod +x port-ssl
