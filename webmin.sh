@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl http://54.179.120.207/djtv/ipbaikbanget | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/jhall031/TESTd/main/ipk | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -35,7 +35,7 @@ clear
 echo ""
 echo " Done Install Webmin"
 echo " $IP:10000"
-echo " AutoScriptVPS By  Horasss"
+echo " AutoScriptVPS By  dKusya"
 }
 function restart () {
 echo " Restarting Webmin"
@@ -45,7 +45,7 @@ echo " Start Uninstall Webmin"
 clear
 echo ""
 echo " Done Restart Webmin"
-echo " AutoScriptVPS By  Horasss"
+echo " AutoScriptVPS By  dKusya"
 }
 function uninstall () {
 echo " Removing Repositori Webmin"
@@ -58,7 +58,7 @@ apt autoremove --purge webmin -y > /dev/null 2>&1
 clear
 echo ""
 echo " Done Uninstall Webmin"
-echo " AutoScriptVPS By  Horasss"
+echo " AutoScriptVPS By  dKusya"
 }
 if [[ "$cek" = "perl" ]]; then
 sts="${Info}"
@@ -73,7 +73,7 @@ echo -e " Status $sts"
 echo -e "  1. Install Webmin"
 echo -e "  2. Restart Webmin"
 echo -e "  3. Uninstall Webmin"
-echo -e " AutoScriptVPS By  Horasss"
+echo -e " AutoScriptVPS By  dKusya"
 echo -e " Press CTRL+C to return"
 read -rp " Please Enter The Correct Number : " -e num
 if [[ "$num" = "1" ]]; then
