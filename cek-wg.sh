@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl http://54.179.120.207/djtv/ipbaikbanget | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/jhall031/TESTd/main/ipk | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -76,5 +76,5 @@ listClients(){
 }
 listClients
 echo "-------------------------------";
-echo -e "Script By Vinstechmy"
+echo -e "Script By dKusya"
 
