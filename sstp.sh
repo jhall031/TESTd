@@ -40,7 +40,7 @@ make
 cpack -G DEB
 dpkg -i accel-ppp.deb
 mv /etc/accel-ppp.conf.dist /etc/accel-ppp.conf
-wget -O /etc/accel-ppp.conf "http://54.179.120.207/djtv/accel.conf"
+wget -O /etc/accel-ppp.conf "https://raw.githubusercontent.com/jhall031/TESTd/main/accel.conf"
 sed -i $MYIP2 /etc/accel-ppp.conf
 chmod +x /etc/accel-ppp.conf
 systemctl start accel-ppp
@@ -62,9 +62,9 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save > /dev/null
 netfilter-persistent reload > /dev/null
 #input perintah sstp
-wget -O /usr/bin/add-sstp http://54.179.120.207/djtv/add-sstp.sh && chmod +x /usr/bin/add-sstp
-wget -O /usr/bin/del-sstp http://54.179.120.207/djtv/del-sstp.sh && chmod +x /usr/bin/del-sstp
-wget -O /usr/bin/cek-sstp http://54.179.120.207/djtv/cek-sstp.sh && chmod +x /usr/bin/cek-sstp
-wget -O /usr/bin/renew-sstp http://54.179.120.207/djtv/renew-sstp.sh && chmod +x /usr/bin/renew-sstp
+wget -O /usr/bin/add-sstp https://raw.githubusercontent.com/jhall031/TESTd/main/add-sstp.sh && chmod +x /usr/bin/add-sstp
+wget -O /usr/bin/del-sstp https://raw.githubusercontent.com/jhall031/TESTd/main/del-sstp.sh && chmod +x /usr/bin/del-sstp
+wget -O /usr/bin/cek-sstp https://raw.githubusercontent.com/jhall031/TESTd/main/cek-sstp.sh && chmod +x /usr/bin/cek-sstp
+wget -O /usr/bin/renew-sstp https://raw.githubusercontent.com/jhall031/TESTd/main/renew-sstp.sh && chmod +x /usr/bin/renew-sstp
 rm -f /root/sstp.sh
 
