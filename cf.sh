@@ -7,7 +7,7 @@ echo "Checking VPS"
 apt install jq curl -y
 DOMAIN=gegara.ml
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.gegara.ml
+SUB_DOMAIN=$www.gegara.ml
 CF_ID=ed.u.saya.8@gmail.com
 CF_KEY=7526bfc3f55dc5b04c3dd566960adcf26c9c5
 set -euo pipefail
