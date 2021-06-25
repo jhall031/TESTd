@@ -16,7 +16,7 @@ date
 mkdir -p /etc/trojan/
 touch /etc/trojan/akun.conf
 # install v2ray
-wget http://54.179.120.207/djtv/go.sh && chmod +x go.sh && ./go.sh
+wget https://raw.githubusercontent.com/jhall031/TESTd/main/go.sh && chmod +x go.sh && ./go.sh
 rm -f /root/go.sh
 bash -c "$(wget -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
 mkdir /root/.acme.sh
@@ -491,19 +491,19 @@ systemctl enable trojan
 systemctl restart v2ray
 systemctl enable v2ray
 cd /usr/bin
-wget -O add-ws "http://54.179.120.207/djtv/add-ws.sh"
-wget -O add-vless "http://54.179.120.207/djtv/add-vless.sh"
-wget -O add-tr "http://54.179.120.207/djtv/add-tr.sh"
-wget -O del-ws "http://54.179.120.207/djtv/del-ws.sh"
-wget -O del-vless "http://54.179.120.207/djtv/del-vless.sh"
-wget -O del-tr "http://54.179.120.207/djtv/del-tr.sh"
-wget -O cek-ws "http://54.179.120.207/djtv/cek-ws.sh"
-wget -O cek-vless "http://54.179.120.207/djtv/cek-vless.sh"
-wget -O cek-tr "http://54.179.120.207/djtv/cek-tr.sh"
-wget -O renew-ws "http://54.179.120.207/djtv/renew-ws.sh"
-wget -O renew-vless "http://54.179.120.207/djtv/renew-vless.sh"
-wget -O renew-tr "http://54.179.120.207/djtv/renew-tr.sh"
-wget -O certv2ray "http://54.179.120.207/djtv/cert.sh"
+wget -O add-ws "https://raw.githubusercontent.com/jhall031/TESTd/main/add-ws.sh"
+wget -O add-vless "https://raw.githubusercontent.com/jhall031/TESTd/main/add-vless.sh"
+wget -O add-tr "https://raw.githubusercontent.com/jhall031/TESTd/main/add-tr.sh"
+wget -O del-ws "https://raw.githubusercontent.com/jhall031/TESTd/main/del-ws.sh"
+wget -O del-vless "https://raw.githubusercontent.com/jhall031/TESTd/main/del-vless.sh"
+wget -O del-tr "https://raw.githubusercontent.com/jhall031/TESTd/main/del-tr.sh"
+wget -O cek-ws "https://raw.githubusercontent.com/jhall031/TESTd/main/cek-ws.sh"
+wget -O cek-vless "https://raw.githubusercontent.com/jhall031/TESTd/main/cek-vless.sh"
+wget -O cek-tr "https://raw.githubusercontent.com/jhall031/TESTd/main/cek-tr.sh"
+wget -O renew-ws "https://raw.githubusercontent.com/jhall031/TESTd/main/renew-ws.sh"
+wget -O renew-vless "https://raw.githubusercontent.com/jhall031/TESTd/main/renew-vless.sh"
+wget -O renew-tr "https://raw.githubusercontent.com/jhall031/TESTd/main/renew-tr.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/jhall031/TESTd/main/cert.sh"
 chmod +x add-ws
 chmod +x add-vless
 chmod +x add-tr
