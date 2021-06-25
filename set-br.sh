@@ -1,7 +1,7 @@
 #!/bin/bash
 curl https://rclone.org/install.sh | bash
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "http://54.179.120.207/djtv/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/jhall031/TESTd/main/rclone.conf"
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
 make install
@@ -19,19 +19,19 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user sitibanyak@std.unissula.ac.id
-from djas
+user edu.saya.8@gmail.com
+from dKs
 password coymgpdxsoqdlsed
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "http://54.179.120.207/djtv/autobackup.sh"
-wget -O backup "http://54.179.120.207/djtv/backup.sh"
-wget -O bckp "http://54.179.120.207/djtv/bckp.sh"
-wget -O restore "http://54.179.120.207/djtv/restore.sh"
-wget -O strt "http://54.179.120.207/djtv/strt.sh"
-wget -O limit-speed "http://54.179.120.207/djtv/limit-speed.sh"
+wget -O autobackup "https://raw.githubusercontent.com/jhall031/TESTd/main/autobackup.sh"
+wget -O backup "https://raw.githubusercontent.com/jhall031/TESTd/main/backup.sh"
+wget -O bckp "https://raw.githubusercontent.com/jhall031/TESTd/main/bckp.sh"
+wget -O restore "https://raw.githubusercontent.com/jhall031/TESTd/main/restore.sh"
+wget -O strt "https://raw.githubusercontent.com/jhall031/TESTd/main/strt.sh"
+wget -O limit-speed "https://raw.githubusercontent.com/jhall031/TESTd/main/limit-speed.sh"
 chmod +x autobackup
 chmod +x backup
 chmod +x bckp
