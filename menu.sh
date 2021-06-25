@@ -88,7 +88,7 @@ echo -e "* ${Blue}add-ws${NC}       : ${UBlue}Create V2RAY Vmess Websocket Accou
 echo -e "* ${Blue}del-ws${NC}       : ${UBlue}Deleting V2RAY Vmess Websocket Account${NC} "
 echo -e "* ${Blue}renew-ws${NC}     : ${UBlue}Extending Vmess Account Active Life${NC} "
 echo -e "* ${Blue}cek-ws${NC}       : ${UBlue}Check User Login V2RAY${NC} "
-echo -e "* ${Blue}cert2vray${NC}    : ${UBlue}Renew Certificate V2RAY Account${NC} "
+echo -e "* ${Blue}certv2ray${NC}    : ${UBlue}Renew Certificate V2RAY Account${NC} "
 echo -e ""
 echo -e "${BGreen}=============================${On_Cyan}-VLESS-${NC}${BGreen}===========================${NC}"
 echo -e ""
