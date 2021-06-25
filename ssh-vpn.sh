@@ -1,5 +1,5 @@
 #!/bin/bash
-# By Horasss
+# By dKusya
 #
 # ==================================================
 
@@ -15,13 +15,13 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=www.vpnstores.net
-organizationalunit=www.vpnstores.net
-commonname=www.vpnstores.net
-email=admin@vpnstores.net
+organization=JAVpala Community
+organizationalunit=JAVpala Community
+commonname=JAVpala Comunity
+email=edu.saya.8@gmail.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "http://54.179.120.207/djtv/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/jhall031/TESTd/main/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -88,14 +88,14 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "http://54.179.120.207/djtv/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/jhall031/TESTd/main/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "http://54.179.120.207/djtv/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/jhall031/TESTd/main/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "http://54.179.120.207/djtv/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/jhall031/TESTd/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -125,7 +125,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "http://54.179.120.207/djtv/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/jhall031/TESTd/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -179,7 +179,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget http://54.179.120.207/djtv/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/jhall031/TESTd/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -234,36 +234,36 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O add-host "http://54.179.120.207/djtv/add-host.sh"
-wget -O about "http://54.179.120.207/djtv/about.sh"
-wget -O menu "http://54.179.120.207/djtv/menu.sh"
-wget -O usernew "http://54.179.120.207/djtv/usernew.sh"
-wget -O trial "http://54.179.120.207/djtv/trial.sh"
-wget -O hapus "http://54.179.120.207/djtv/hapus.sh"
-wget -O member "http://54.179.120.207/djtv/member.sh"
-wget -O delete "http://54.179.120.207/djtv/delete.sh"
-wget -O cek "http://54.179.120.207/djtv/cek.sh"
-wget -O restart "http://54.179.120.207/djtv/restart.sh"
-wget -O speedtest "http://54.179.120.207/djtv/speedtest_cli.py"
-wget -O info "http://54.179.120.207/djtv/info.sh"
-wget -O ram "http://54.179.120.207/djtv/ram.sh"
-wget -O renew "http://54.179.120.207/djtv/renew.sh"
-wget -O autokill "http://54.179.120.207/djtv/autokill.sh"
-wget -O ceklim "http://54.179.120.207/djtv/ceklim.sh"
-wget -O tendang "http://54.179.120.207/djtv/tendang.sh"
-wget -O clear-log "http://54.179.120.207/djtv/clear-log.sh"
-wget -O change-port "http://54.179.120.207/djtv/change.sh"
-wget -O port-ovpn "http://54.179.120.207/djtv/port-ovpn.sh"
-wget -O port-ssl "http://54.179.120.207/djtv/port-ssl.sh"
-wget -O port-wg "http://54.179.120.207/djtv/port-wg.sh"
-wget -O port-tr "http://54.179.120.207/djtv/port-tr.sh"
-wget -O port-sstp "http://54.179.120.207/djtv/port-sstp.sh"
-wget -O port-squid "http://54.179.120.207/djtv/port-squid.sh"
-wget -O port-ws "http://54.179.120.207/djtv/port-ws.sh"
-wget -O port-vless "http://54.179.120.207/djtv/port-vless.sh"
-wget -O wbmn "http://54.179.120.207/djtv/webmin.sh"
-wget -O xp "http://54.179.120.207/djtv/xp.sh"
-wget -O kernel-updt "http://54.179.120.207/djtv/kernel-update.sh"
+wget -O add-host "https://raw.githubusercontent.com/jhall031/TESTd/main/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/jhall031/TESTd/main/about.sh"
+wget -O menu "https://raw.githubusercontent.com/jhall031/TESTd/main/menu.sh"
+wget -O usernew "https://raw.githubusercontent.com/jhall031/TESTd/main/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/jhall031/TESTd/main/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/jhall031/TESTd/main/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/jhall031/TESTd/main/member.sh"
+wget -O delete "https://raw.githubusercontent.com/jhall031/TESTd/main/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/jhall031/TESTd/main/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/jhall031/TESTd/main/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/jhall031/TESTd/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/jhall031/TESTd/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/jhall031/TESTd/main/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/jhall031/TESTd/main/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/jhall031/TESTd/main/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/jhall031/TESTd/main/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/jhall031/TESTd/main/tendang.sh"
+wget -O clear-log "https://raw.githubusercontent.com/jhall031/TESTd/main/clear-log.sh"
+wget -O change-port "https://raw.githubusercontent.com/jhall031/TESTd/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/jhall031/TESTd/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/jhall031/TESTd/main/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/jhall031/TESTd/main/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/jhall031/TESTd/main/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/jhall031/TESTd/main/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/jhall031/TESTd/main/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/jhall031/TESTd/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/jhall031/TESTd/main/port-vless.sh"
+wget -O wbmn "https://raw.githubusercontent.com/jhall031/TESTd/main/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/jhall031/TESTd/main/xp.sh"
+wget -O kernel-updt "https://raw.githubusercontent.com/jhall031/TESTd/main/kernel-update.sh"
 chmod +x add-host
 chmod +x menu
 chmod +x usernew
