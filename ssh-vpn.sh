@@ -263,6 +263,7 @@ wget -O port-ws "https://raw.githubusercontent.com/jhall031/TESTd/main/port-ws.s
 wget -O port-vless "https://raw.githubusercontent.com/jhall031/TESTd/main/port-vless.sh"
 wget -O wbmn "https://raw.githubusercontent.com/jhall031/TESTd/main/webmin.sh"
 wget -O xp "https://raw.githubusercontent.com/jhall031/TESTd/main/xp.sh"
+wget -O xp "https://raw.githubusercontent.com/jhall031/TESTd/main/updated.sh"
 wget -O kernel-updt "https://raw.githubusercontent.com/jhall031/TESTd/main/kernel-update.sh"
 chmod +x add-host
 chmod +x menu
@@ -293,6 +294,7 @@ chmod +x port-ws
 chmod +x port-vless
 chmod +x wbmn
 chmod +x xp
+chmod +x updated
 chmod +x kernel-updt
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
